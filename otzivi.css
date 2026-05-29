@@ -1,0 +1,338 @@
+/* Общий фон страницы — бежевый */
+body {
+    background-color: #FFB554; /* Бежевый цвет */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* --- ШАПКА САЙТА --- */
+.header {
+    background-color: #DE5900; /* Оранжевый цвет */
+    padding: 30px 60px;
+    position: relative; /* Нужно для позиционирования лапок на фоне */
+    border-radius: 0 0 40px 40px;
+    overflow: hidden; /* Чтобы лапки не вылезали за округлые края шапки */
+}
+
+/* Обертка для логотипа и текста */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    z-index: 2; /* Поднимает текст и логотип НАД лапками фона */
+}
+
+/* Круглый логотип с желтой рамкой */
+.logo-box {
+    width: 170px;
+    height: 170px;
+    border: 5px solid #FFC107; /* Насыщенная желтая рамка */
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    width: 110%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Блок заголовков */
+.header-titles {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+/* Главный рукописный заголовок */
+.main-title {
+    font-family: 'Caveat', cursive;
+    font-size: 76px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Рукописный подзаголовок (смещен чуть правее и ниже) */
+.subtitle {
+    font-family: 'Caveat', cursive;
+    font-size: 44px;
+    margin: 10px 0 0 120px; /* Сдвиг вправо как на макете */
+    line-height: 1;
+}
+
+/* --- КАРТИНКИ ЛАПОК НА ЗАДНЕМ ФОНЕ --- */
+.header-paws {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Опускает под текст */
+    pointer-events: none;
+}
+
+/* Общий стиль для каждой лапки */
+.paw {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    color: #000000;
+    opacity: 0.85;
+    transform: rotate(25deg); /* Все лапки повернуты по диагонали вправо */
+}
+
+/* Хаотичное расположение лапок по всей площади шапки */
+.p1 { top: 10px; left: 340px;}
+.p2 { top: 15px; left: 480px;}
+.p3 { top: 10px; left: 620px;}
+.p4 { top: 10px; left: 880px;}
+.p5 { bottom: 15px; left: 220px;}
+.p6 { bottom: 10px; left: 350px;}
+.p7 { top: 90px; left: 740px;}
+.p8 { bottom: 40px; left: 830px;}
+
+
+
+/* Блок навигации */
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0; 
+    padding: 0;
+}
+.box {
+    width: 200px; 
+    height: 80px; 
+    display: flex;     /* Для центрирования текста внутри */
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: 2px solid rgba(255, 255, 255, 0.851);
+    background-color: #622700;
+}
+.box a {
+    color: #DE5900; /* Рыжий цвет */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: color 0.2s; /* Плавная смена цвета */
+}
+
+.box.active a {
+    color: #ffffff; /* Белый цвет */
+}
+.box a:hover {
+    color: #ffffff; 
+}
+/* Скругления для крайних кнопок меню */
+.border-left { border-radius: 10px 0 0 10px; }
+.border-right { border-radius: 0 10px 10px 0; }
+
+
+
+/* Стили для основного контента (чтобы не сливался с фоном) */
+.content {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column; /* ИСПРАВЛЕНИЕ: заставляет блоки идти сверху вниз, а не вбок */
+    align-items: center;
+    gap: 20px;
+}
+
+/* Карточка отзыва */
+.review-card {
+    background-color: #d15711; /* Коричнево-оранжевый фон карточки */
+    border-radius: 20px;       /* Скругление углов */
+    width: 100%;
+    max-width: 950px;          /* Максимальная ширина как у карточек номеров */
+    display: flex;             /* Разделяет блок на левую и правую часть */
+    align-items: center;       /* Центрирует контент по вертикали */
+    padding: 30px 40px;
+    box-sizing: border-box;
+    gap: 40px;                 /* Расстояние между автором и текстом */
+}
+
+.review-card:first-child {
+    margin-top: 40px; /* Увеличьте это число (например, на 50px или 60px), если нужен отступ побольше */
+}
+
+/* Левая часть: контейнер автора */
+.review-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;              /* Фиксированная ширина левой колонки */
+    flex-shrink: 0;            /* Запрещает сжатие колонки */
+    gap: 15px;
+}
+
+/* Круглая обертка для аватарки */
+.avatar-box {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ffffff; /* Белый фон под иконкой, если она прозрачная */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Имя автора под аватаркой */
+.author-name {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+/* Правая часть: текст отзыва */
+.review-text {
+    color: #ffffff;
+    font-size: 22px;           /* Крупный читаемый шрифт */
+    line-height: 1.4;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+/* --- ПОДВАЛ САЙТА (ФУТЕР) --- */
+.footer {
+    background-color: #622700; /* Темно-коричневый фон */
+    width: 100%;
+    padding: 40px 20px 30px 20px;
+    box-sizing: border-box;
+    margin-top: 60px; /* Отступ от контента до подвала */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* Общие стили для колонок подвала */
+.footer-col {
+    flex: 1;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Оранжевые заголовки с коричневой обводкой */
+.footer-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.892); /* Оранжевый цвет */
+    margin-top: 0;
+    margin-bottom: 25px;
+    
+    /* Обводка текста в тон фона подвала */
+    text-shadow: 
+        -2px -2px 0 #DE5900,  
+         2px -2px 0 #DE5900,  
+        -2px  2px 0 #DE5900,  
+         2px  2px 0 #DE5900,  
+        -2px  0px 0 #DE5900,  
+         2px  0px 0 #DE5900,  
+         0px -2px 0 #DE5900,  
+         0px  2px 0 #DE5900,  
+         0px 0px 5px rgba(0,0,0,0.5); /* Небольшое свечение для четкости */
+}
+
+/* Левая колонка */
+.col-left p {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0 0 8px 0;
+    font-weight: 500;
+}
+
+.footer-copyright {
+    font-size: 18px;
+    margin-top: 40px;
+    font-weight: 500;
+}
+
+/* Средняя колонка (Ссылки) */
+.col-center {
+    text-align: center;
+}
+
+.col-center .footer-title {
+    text-align: center;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Правая колонка (Контакты) */
+.col-right .footer-title {
+    font-size: 28px; /* Чуть уменьшен из-за длинной фразы */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.contact-icon {
+    font-size: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-text {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contact-text:hover {
+    text-decoration: underline;
+}

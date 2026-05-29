@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зоогостиница «Хэппи Вульфик»</title>
+    <link rel="stylesheet" href="kontakti.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <!-- Контейнер для выравнивания элементов внутри шапки -->
+        <div class="header-container">
+            <!-- Круглый логотип в желтой рамке -->
+            <div class="logo-box">
+                <img src="img/собака_лого_круг.png" alt="Логотип Хэппи Вульфик" class="logo-img">
+            </div>
+            <!-- Блок с рукописным текстом -->
+            <div class="header-titles">
+                <h1 class="main-title">Хэппи Вульфик</h1>
+                <p class="subtitle">Зоогостиница для вашего питомца</p>
+            </div>
+        </div>
+        <!-- Картинки лапок на заднем фоне (разбросаны и повернуты вправо) -->
+        <div class="header-paws">
+            <img src="img/лапа.png" alt="Лапки" class="paw p1">
+            <img src="img/лапа.png" alt="Лапки" class="paw p2">
+            <img src="img/лапа.png" alt="Лапки" class="paw p3">
+            <img src="img/лапа.png" alt="Лапки" class="paw p4">
+            <img src="img/лапа.png" alt="Лапки" class="paw p5">
+            <img src="img/лапа.png" alt="Лапки" class="paw p6">
+            <img src="img/лапа.png" alt="Лапки" class="paw p7">
+            <img src="img/лапа.png" alt="Лапки" class="paw p8">
+        </div>
+    </header>
+
+
+    <!-- Блок навигации -->
+    <nav class="nav">
+    <ul>
+        <li class="box border-left"><a href="index.html">Главная</a></li>
+        <li class="box"><a href="uslugi.html">Услуги/цены</a></li>
+        <li class="box"><a href="otzivi.html">Отзывы</a></li>
+        <li class="box border-right active"><a href="#">Контакты</a></li>
+    </ul>
+</nav>
+
+
+<!-- Основное содержимое (пример) -->
+<main class="content">
+    <!-- Общий контейнер для карты и текстовых блоков -->
+    <div class="contacts-container">
+        <!-- Левая колонка: Полноценная Яндекс Карта -->
+        <div class="contacts-map-box">
+            <div id="map"></div>
+        </div>
+        <!-- Правая колонка: Текстовые блоки -->
+        <div class="contacts-info-box">
+            <!-- Блок 1: Наши адреса -->
+            <div class="contacts-block">
+                <h3 class="contacts-title">Наши адреса:</h3>
+                <ol class="contacts-list address-list">
+                    <li>Кирпичный переулок, 8</li>
+                    <li>Есть и другие места по СПБ и Ленобласти</li>
+                </ol>
+            </div>
+            <!-- Блок 2: Формы связи -->
+            <div class="contacts-block">
+                <h3 class="contacts-title">С нами можно связаться:</h3>
+                <ul class="contacts-list connect-list">
+                    <li>всегда на связи: +7 (922) 999-22-22</li>
+                    <li>оставить заявку в разделе подробнее в услугах</li>
+                    <li>задать вопрос: happy_vulfik@mail.ru</li>
+                    <li>наши соцсети: ...</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Подвал сайта (Футер) -->
+<footer class="footer">
+<div class="footer-container">
+    
+    <!-- Левая колонка: Инфо -->
+    <div class="footer-col col-left">
+        <h4 class="footer-title">Инфо:</h4>
+        <p>Сайт "Хэппи Вульфик"</p>
+        <p>Зоогостиница для вашего питомца</p>
+        <div class="footer-copyright">
+            2006 - 2026 | &copy; happy-vulfik.com
+        </div>
+    </div>
+
+    <!-- Средняя колонка: Ориентация по сайту -->
+    <div class="footer-col col-center">
+        <h4 class="footer-title">Ориентация по сайту:</h4>
+        <ul class="footer-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="uslugi.html">Услуги/цены</a></li>
+            <li><a href="otzivi.html">Отзывы</a></li>
+            <li><a href="kontakti.html">Контакты</a></li>
+        </ul>
+    </div>
+
+    <!-- Правая колонка: Контакты -->
+    <div class="footer-col col-right">
+        <h4 class="footer-title">По всем вопросам обращайтесь:</h4>
+        <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div class="contact-text">+7 (922) 999-22-22</div>
+        </div>
+        <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div class="contact-text">happy_vulfik@mail.ru</div>
+        </div>
+    </div>
+
+</div>
+</footer>
+
+<script>
+    // Находим все кнопки меню
+    const menuItems = document.querySelectorAll('.nav .box');
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', function(e) {            
+            // Удаляем класс active у абсолютно всех кнопок
+            menuItems.forEach(el => el.classList.remove('active'));
+            // Добавляем класс active только той, на которую кликнули
+            this.classList.add('active');
+        });
+    });
+</script>
+<!-- Подключение API Яндекс Карт -->
+<script src="https://api-maps.yandex.ru/2.1/?apikey=40d1649f-0493-4b70-98ba-98533de7710b&lang=ru_RU" type="text/javascript"></script>
+
+<script type="text/javascript">
+    // Ждем, пока API Яндекс Карт полностью загрузится
+    ymaps.ready(init);
+    
+    function init(){
+        // Координаты центра карты и метки (Санкт-Петербург, Невский проспект как пример)
+        // Вы можете заменить эти цифры на свои координаты
+        var myCoordinates = [59.934822, 30.317341];
+
+        var myMap = new ymaps.Map("map", {
+            center: myCoordinates, // Где отцентровать карту
+            zoom: 14,              // Масштаб (от 0 до 19)
+            controls: ['zoomControl', 'fullscreenControl'] // Удобные кнопки управления
+        });
+
+        // Создаем круглую метку
+        var myPlacemark = new ymaps.Placemark(myCoordinates, {
+            hintContent: 'Зоогостиница "Хэппи Вульфик"',
+            balloonContent: 'Мы ждем вашего питомца здесь!'
+        }, {
+            preset: 'islands#orangeDogIcon' // Специальная оранжевая иконка с собачкой от Яндекса
+        });
+
+        // Добавляем метку на карту
+        myMap.geoObjects.add(myPlacemark);
+    }
+</script>
+</body>
+</html>

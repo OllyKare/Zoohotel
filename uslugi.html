@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зоогостиница «Хэппи Вульфик»</title>
+    <link rel="stylesheet" href="uslugi.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <!-- Контейнер для выравнивания элементов внутри шапки -->
+        <div class="header-container">
+            <!-- Круглый логотип в желтой рамке -->
+            <div class="logo-box">
+                <img src="img/собака_лого_круг.png" alt="Логотип Хэппи Вульфик" class="logo-img">
+            </div>
+            <!-- Блок с рукописным текстом -->
+            <div class="header-titles">
+                <h1 class="main-title">Хэппи Вульфик</h1>
+                <p class="subtitle">Зоогостиница для вашего питомца</p>
+            </div>
+        </div>
+        <!-- Картинки лапок на заднем фоне (разбросаны и повернуты вправо) -->
+        <div class="header-paws">
+            <img src="img/лапа.png" alt="Лапки" class="paw p1">
+            <img src="img/лапа.png" alt="Лапки" class="paw p2">
+            <img src="img/лапа.png" alt="Лапки" class="paw p3">
+            <img src="img/лапа.png" alt="Лапки" class="paw p4">
+            <img src="img/лапа.png" alt="Лапки" class="paw p5">
+            <img src="img/лапа.png" alt="Лапки" class="paw p6">
+            <img src="img/лапа.png" alt="Лапки" class="paw p7">
+            <img src="img/лапа.png" alt="Лапки" class="paw p8">
+        </div>
+    </header>
+
+
+    <!-- Блок навигации -->
+    <nav class="nav">
+    <ul>
+        <li class="box border-left"><a href="index.html">Главная</a></li>
+        <li class="box active"><a href="#">Услуги/цены</a></li>
+        <li class="box"><a href="otzivi.html">Отзывы</a></li>
+        <li class="box border-right"><a href="kontakti.html">Контакты</a></li>
+    </ul>
+</nav>
+
+
+<!-- Основное содержимое страницы -->
+<main class="content">
+
+    <!-- Форма поиска по сайту -->
+    <div class="search-container">
+        <input type="text" id="room-search" placeholder="Искать на сайте..." autocomplete="off">
+    </div>
+
+    <!-- Карточка номера -->
+    <div class="room-card">
+        <!-- Левая часть: Картинка номера -->
+        <div class="room-image-box">
+            <img src="img/комфорт.jpg" alt="Фото номера" class="room-img">
+        </div>
+        <!-- Правая часть: Описание и параметры -->
+        <div class="room-info">
+            <!-- Заголовок номера -->
+            <h3 class="room-title">Комфорт</h3>
+            <!-- Подробное описание -->
+            <p class="room-description">
+                Большое описание номера (что туда входит, что не входит, вода, корм, лоток, уборка в номере, уход за питомцем, прогулки, игрушки)
+            </p>
+            <!-- Характеристики и статус с кнопкой -->
+            <div class="room-meta-container">
+                <!-- Блок характеристик (слева) -->
+                <div class="room-specs">
+                    <p><strong>Для кого:</strong> кот, кошка</p>
+                    <p><strong>Размеры:</strong> 1 м * 1 м</p>
+                    <p><strong>Цена:</strong> 3 руб./день</p>
+                </div>
+                <!-- Блок статуса и ссылки (справа) -->
+                <div class="room-status-box">
+                    <div class="room-status text-reserved">Статус: свободно</div>
+                    <a href="#" class="room-more-link">Подробнее »»»</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="room-card">
+        <div class="room-image-box">
+            <img src="img/люкс.jpg" alt="Фото номера" class="room-img">
+        </div>
+        <div class="room-info">
+            <h3 class="room-title">Люкс</h3>
+            <p class="room-description">
+                Большое описание номера (что туда входит, что не входит, вода, корм, лоток, уборка в номере, уход за питомцем, прогулки, игрушки)
+            </p>
+            <div class="room-meta-container">
+                <div class="room-specs">
+                    <p><strong>Для кого:</strong> собака, пес</p>
+                    <p><strong>Размеры:</strong> 2 м * 2 м</p>
+                    <p><strong>Цена:</strong> 6 руб./день</p>
+                </div>
+                <div class="room-status-box">
+                    <div class="room-status text-reserved">Статус: забронировано</div>
+                    <a href="#" class="room-more-link">Подробнее »»»</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="room-card">
+        <div class="room-image-box">
+            <img src="img/лакшери.jpg" alt="Фото номера" class="room-img">
+        </div>
+        <div class="room-info">
+            <h3 class="room-title">Лакшери</h3>
+            <p class="room-description">
+                Большое описание номера (что туда входит, что не входит, вода, корм, лоток, уборка в номере, уход за питомцем, прогулки, игрушки)
+            </p>
+            <div class="room-meta-container">
+                <div class="room-specs">
+                    <p><strong>Для кого:</strong> кот, кошка, собака, пес</p>
+                    <p><strong>Размеры:</strong> 7 м * 7 м</p>
+                    <p><strong>Цена:</strong> 15 руб./день</p>
+                </div>
+                <div class="room-status-box">
+                    <div class="room-status text-reserved">Статус: забронировано</div>
+                    <a href="#" class="room-more-link">Подробнее »»»</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Подвал сайта (Футер) -->
+<footer class="footer">
+<div class="footer-container">
+    
+    <!-- Левая колонка: Инфо -->
+    <div class="footer-col col-left">
+        <h4 class="footer-title">Инфо:</h4>
+        <p>Сайт "Хэппи Вульфик"</p>
+        <p>Зоогостиница для вашего питомца</p>
+        <div class="footer-copyright">
+            2006 - 2026 | &copy; happy-vulfik.com
+        </div>
+    </div>
+
+    <!-- Средняя колонка: Ориентация по сайту -->
+    <div class="footer-col col-center">
+        <h4 class="footer-title">Ориентация по сайту:</h4>
+        <ul class="footer-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="uslugi.html">Услуги/цены</a></li>
+            <li><a href="otzivi.html">Отзывы</a></li>
+            <li><a href="kontakti.html">Контакты</a></li>
+        </ul>
+    </div>
+
+    <!-- Правая колонка: Контакты -->
+    <div class="footer-col col-right">
+        <h4 class="footer-title">По всем вопросам обращайтесь:</h4>
+        <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div class="contact-text">+7 (922) 999-22-22</div>
+        </div>
+        <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div class="contact-text">happy_vulfik@mail.ru</div>
+        </div>
+    </div>
+
+</div>
+</footer>
+
+<script>
+    // Находим все кнопки меню
+    const menuItems = document.querySelectorAll('.nav .box');
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            // Удаляем класс active у абсолютно всех кнопок
+            menuItems.forEach(el => el.classList.remove('active'));
+            // Добавляем класс active только той, на которую кликнули
+            this.classList.add('active');
+        });
+    });
+
+    // Находим строку поиска и все карточки номеров на странице
+    const searchInput = document.getElementById('room-search');
+    const roomCards = document.querySelectorAll('.room-card');
+
+    // Слушаем каждое нажатие клавиши в поле ввода
+    searchInput.addEventListener('input', function() {
+        // Переводим введенный текст в нижний регистр, чтобы поиск не зависел от больших/маленьких букв
+        const filterText = this.value.toLowerCase().trim();
+
+        roomCards.forEach(card => {
+            // Берем весь текстовый контент внутри текущей карточки (название, описание, характеристики)
+            const cardText = card.textContent.toLowerCase();
+
+            // Если текст из поиска есть внутри карточки — показываем её, если нет — скрываем
+            if (cardText.includes(filterText)) {
+                card.style.display = 'flex'; // Показываем карточку (возвращаем ей flex-режим)
+            } else {
+                card.style.display = 'none'; // Скрываем карточку
+            }
+        });
+    });
+</script>
+<!-- Всплывающее окно бронирования -->
+<div class="modal-overlay" id="bookingModal">
+    <div class="modal-box">
+        <!-- Кнопка закрытия окна (крестик) -->
+        <button class="modal-close" id="closeModalBtn">&times;</button>
+        
+        <h3 class="modal-title">Бронирование номера</h3>
+        
+        <form id="bookingForm" class="modal-form">
+            <div class="form-group">
+                <label for="petName">Кличка питомца:</label>
+                <input type="text" id="petName" required placeholder="Например: Барсик">
+            </div>
+            
+            <div class="form-group">
+                <label for="bookingDate">Дата заезда:</label>
+                <input type="date" id="bookingDate" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="userPhone">Номер телефона:</label>
+                <input type="tel" id="userPhone" required placeholder="+7 (___) ___-__-__">
+            </div>
+            
+            <button type="submit" class="form-submit-btn">Подать заявку</button>
+        </form>
+    </div>
+</div>
+<script>
+    // Находим необходимые элементы для формы бронирования
+const modalOverlay = document.getElementById('bookingModal');
+const closeModalBtn = document.getElementById('closeModalBtn');
+const bookingForm = document.getElementById('bookingForm');
+// Находим все ссылки "Подробнее" на всех карточках
+const moreLinks = document.querySelectorAll('.room-more-link');
+
+// 1. Открытие модального окна при клике на любую ссылку "Подробнее"
+moreLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Отменяем стандартный переход по ссылке #
+        modalOverlay.classList.add('is-open'); // Показываем окно
+    });
+});
+
+// 2. Закрытие модального окна при клике на крестик
+closeModalBtn.addEventListener('click', function() {
+    modalOverlay.classList.remove('is-open');
+});
+
+// 3. Закрытие окна при клике на серое пространство вокруг формы
+modalOverlay.addEventListener('click', function(e) {
+    if (e.target === modalOverlay) {
+        modalOverlay.classList.remove('is-open');
+    }
+});
+
+// 4. Обработка отправки заполненной формы
+bookingForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Запрещаем стандартную перезагрузку страницы при отправке
+
+    // Выводим сообщение об успешной отправке
+    alert('Заявка отправлена!');
+
+    // Очищаем все поля формы
+    bookingForm.reset();
+
+    // Закрываем всплывающее окно
+    modalOverlay.classList.remove('is-open');
+});
+</script>
+</body>
+</html>

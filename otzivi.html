@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зоогостиница «Хэппи Вульфик»</title>
+    <link rel="stylesheet" href="otzivi.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <!-- Контейнер для выравнивания элементов внутри шапки -->
+        <div class="header-container">
+            <!-- Круглый логотип в желтой рамке -->
+            <div class="logo-box">
+                <img src="img/собака_лого_круг.png" alt="Логотип Хэппи Вульфик" class="logo-img">
+            </div>
+            <!-- Блок с рукописным текстом -->
+            <div class="header-titles">
+                <h1 class="main-title">Хэппи Вульфик</h1>
+                <p class="subtitle">Зоогостиница для вашего питомца</p>
+            </div>
+        </div>
+        <!-- Картинки лапок на заднем фоне (разбросаны и повернуты вправо) -->
+        <div class="header-paws">
+            <img src="img/лапа.png" alt="Лапки" class="paw p1">
+            <img src="img/лапа.png" alt="Лапки" class="paw p2">
+            <img src="img/лапа.png" alt="Лапки" class="paw p3">
+            <img src="img/лапа.png" alt="Лапки" class="paw p4">
+            <img src="img/лапа.png" alt="Лапки" class="paw p5">
+            <img src="img/лапа.png" alt="Лапки" class="paw p6">
+            <img src="img/лапа.png" alt="Лапки" class="paw p7">
+            <img src="img/лапа.png" alt="Лапки" class="paw p8">
+        </div>
+    </header>
+
+
+    <!-- Блок навигации -->
+    <nav class="nav">
+    <ul>
+        <li class="box border-left"><a href="index.html">Главная</a></li>
+        <li class="box"><a href="uslugi.html">Услуги/цены</a></li>
+        <li class="box active"><a href="#">Отзывы</a></li>
+        <li class="box border-right"><a href="kontakti.html">Контакты</a></li>
+    </ul>
+</nav>
+
+
+<!-- Основное содержимое (пример) -->
+<main class="content">
+    <!-- Блок отзыва 1 (Анастасия) -->
+    <div class="review-card">
+        <!-- Левая часть: автор -->
+        <div class="review-author">
+            <div class="avatar-box">
+                <!-- Замените на путь к аватарке, например, girl.png -->
+                <img src="img/Ж.png" alt="Анастасия" class="avatar-img">
+            </div>
+            <div class="author-name">Анастасия</div>
+        </div>
+        <!-- Правая часть: текст -->
+        <div class="review-text">
+            Прекрасное заведение! Персонал очень доброжелательный, номера чистые. Моей котичке Сонечке очень понравилось! Всем рекомендую)))
+        </div>
+    </div>
+
+    <!-- Блок отзыва 2 (Олег) -->
+    <div class="review-card">
+        <!-- Левая часть: автор -->
+        <div class="review-author">
+            <div class="avatar-box">
+                <!-- Замените на путь к аватарке, например, boy.png -->
+                <img src="img/М.png" alt="Олег" class="avatar-img">
+            </div>
+            <div class="author-name">Олег</div>
+        </div>
+        <!-- Правая часть: текст -->
+        <div class="review-text">
+            У меня большая собака - хаски, я переживал, что Бобу будет тесно. Но номера просторные, да и гуляют с питомцами часто. Приятным бонусом были видео и фотоотчеты.
+        </div>
+    </div>
+</main>
+
+<!-- Подвал сайта (Футер) -->
+<footer class="footer">
+<div class="footer-container">
+    
+    <!-- Левая колонка: Инфо -->
+    <div class="footer-col col-left">
+        <h4 class="footer-title">Инфо:</h4>
+        <p>Сайт "Хэппи Вульфик"</p>
+        <p>Зоогостиница для вашего питомца</p>
+        <div class="footer-copyright">
+            2006 - 2026 | &copy; happy-vulfik.com
+        </div>
+    </div>
+
+    <!-- Средняя колонка: Ориентация по сайту -->
+    <div class="footer-col col-center">
+        <h4 class="footer-title">Ориентация по сайту:</h4>
+        <ul class="footer-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="uslugi.html">Услуги/цены</a></li>
+            <li><a href="otzivi.html">Отзывы</a></li>
+            <li><a href="kontakti.html">Контакты</a></li>
+        </ul>
+    </div>
+
+    <!-- Правая колонка: Контакты -->
+    <div class="footer-col col-right">
+        <h4 class="footer-title">По всем вопросам обращайтесь:</h4>
+        <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div class="contact-text">+7 (922) 999-22-22</div>
+        </div>
+        <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div class="contact-text">happy_vulfik@mail.ru</div>
+        </div>
+    </div>
+
+</div>
+</footer>
+
+<script>
+    // Находим все кнопки меню
+    const menuItems = document.querySelectorAll('.nav .box');
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', function(e) {            
+            // Удаляем класс active у абсолютно всех кнопок
+            menuItems.forEach(el => el.classList.remove('active'));
+            // Добавляем класс active только той, на которую кликнули
+            this.classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>
